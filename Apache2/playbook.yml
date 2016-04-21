@@ -1,4 +1,0 @@
-- hosts: apache2
-
-  roles:
-    - apache2
