@@ -1,0 +1,26 @@
+# Requirements
+A machine running linux is required, use a virtual machine if needed.
+You need ansible installed. Do "apt-get install ansible"
+
+# Forking and cloning the repository
+Go to https://github.com/nicl0996/wordpress-ansible and press fork in the,
+upper right corner. Login if needed.
+Create a local clone from the formed repository using
+"git clone https://github.com/YOUR-USERNAME/wordpress-ansible".
+Replace YOUR-USERNAME with your own github account username.
+
+#Running the playbook
+Go into the directory of the files, for example "cd /home/jesper/wordpress-ansible
+Edit the hosts file to either localhost or the ip address of the server,
+(can be the machine you are working on) with "nano hosts"
+Go to /etc/ansible and change the hostfile location in ansible.cfg to "/home/USER/wordpress-ansible",
+sawp user with your own user name.
+Generate public/private key pairs with "ssh-keygen". Press enter through all the steps.
+Copy the public key from the localhost with "ssh-copy-id IP-ADDRESS". 
+Replace IP-ADDRESS with your own ip.
+Run it with ansible using "ansible-playbook playbook.yml -i hosts -u USER -k"
+Replace USER with your own user name
+
+# Error solving
+If you have sudo problems, make sure sudo is installed and add relevant users in /etc/sudoers.
+Go into /etc/ansible/ansible.cfg, uncomment ask_sudo_pass and set it to = Yes
