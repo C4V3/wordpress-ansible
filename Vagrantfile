@@ -5,11 +5,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "debian/jessie64"
   config.vm.provider "virtualbox"
-  #config.vm.synced_folder "/home/its/vagrant-prov/wordpress-ansible", "/home/vagrant/wordpress-ansible", type: "rsync"
-  #config.vm.provision :shell, :path "ansibleinst.sh"}
   config.vm.provision :ansible do |ansible|
+   #change playbook path to whatever location it has on your own machine
    ansible.playbook = "/home/its/vagrant-prov/wordpress-ansible/playbook.yml"
-   #ansible.inventory_path = "/home/its/vagrant-prov/wordpress-ansible/hosts"
   end
 
 end
