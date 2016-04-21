@@ -2,6 +2,52 @@
 A machine running linux is required, use a virtual machine if needed.
 You need ansible installed. Do "apt-get install ansible"
 
+# Vagrant
+Download and install vagrant in your OS from:
+https://www.vagrantup.com/downloads.html
+Download VirtualBox in your OS from:
+https://www.virtualbox.org/wiki/downloads
+You can download vagrant box from:
+https://atlas.hashicrop.com/boxes/search?provider-virtualbox
+We choose: debian/jessie 64
+
+# Install Vagrant Windows/Linux
+Create a directory where you want to save your machine
+	C:\mkdir debian-jessie.
+	C:\cd debian-jessie
+	C:\debian-jesse>
+
+Execute vagrant in "C:\debian-jessie>"
+	C:\debian-jessie>vagrant init
+You will get a file called "Vagrantfile". Open it and change
+	config.vm.box = "base"
+to:
+	config.vm.box = "debian/jessie64"
+Alternative way -> if you type in:
+	C:\debian-jessie>vagrant init debian/jessie64
+It will create the "Vagrantfile" with config.vm.box = "debian/jessie64"
+Note: The first time it will download the "box", might take some time.
+
+Now we have debian/jessie64 in C:\debian-jessie>
+	Run debian-jessie with "up"
+		C:\debian-jessie>vagrant up
+	We can check the status of our machine with "status"
+		C:\debian-jessie>vagrant status
+	Acces to the machine with:
+		C:\debian-jessie>vagrant ssh
+
+Create and copy keygen in debian-jessie with:
+ssh-keygen
+
+and
+
+ssh-copy-id locanhost
+
+Now try logging into the machine with:
+ssh 'localhost
+
+Make sure only the key(s) you wanted to be added.
+
 # Forking and cloning the repository
 Go to https://github.com/nicl0996/wordpress-ansible and press fork in the,
 upper right corner. Login if needed.
@@ -9,14 +55,15 @@ Create a local clone from the formed repository using
 "git clone https://github.com/YOUR-USERNAME/wordpress-ansible".
 Replace YOUR-USERNAME with your own github account username.
 
-#Running the playbook
-Go into the directory of the files, for example "cd /home/jesper/wordpress-ansible
+# Running the playbook
+Go into the directory of the files, for example
+"cd /home/jesper/wordpress-ansible
 Edit the hosts file to either localhost or the ip address of the server,
 (can be the machine you are working on) with "nano hosts"
 Go to /etc/ansible and change the hostfile location in ansible.cfg to "/home/USER/wordpress-ansible",
 sawp user with your own user name.
 Generate public/private key pairs with "ssh-keygen". Press enter through all the steps.
-Copy the public key from the localhost with "ssh-copy-id IP-ADDRESS". 
+Copy the public key from the localhost with "ssh-copy-id localhost". 
 Replace IP-ADDRESS with your own ip.
 Run it with ansible using "ansible-playbook playbook.yml -i hosts -u USER -k"
 Replace USER with your own user name
