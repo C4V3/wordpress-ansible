@@ -1,4 +1,11 @@
 # Wordpress Ansible project for IT Security (2. semester)
+
+IMPORTANT!
+###
+Use Vagrant v1.8.1
+Use Ansible v2.0
+Use Virtualbox v5.0
+####
 #### About: 
 When Vagrant is run, a Virtual Machine is created, it runs the Ansible playbook, which installs Apache2, PHP, MySQL and a Wordpress web app that is accessible from the LAN and a database is be imported. This system has automated Backups, so a complete restoration is done from the latest Backup after every "Vagrant up".
 
