@@ -1,6 +1,5 @@
 # Wordpress Ansible project for IT Security (2. semester)
 
-IMPORTANT!
 ###
 Vagrant versions tested
 * Vagrant 1.8.1
@@ -41,22 +40,36 @@ This system will have automated Backups, so a complete restoration is done from 
     wordpress
 
 ### Todo:
-1. consolidation/vasic functionality
-    a. vagrant up workning with KVM and virtualbox - done
-    b. write a basic README.md file with short description - done
-    c. restructure to follow ansible best practice dir structure
-    d. make script or describe how to perform integration tests
-    e. describe PR requirements in reade file
-    f. make vagrant up on windows work with ansible
-    g. make ansible install mysql
-    h. make ansible install wordpress
-4. Development
-    a. check_mk (not security for now)
-    b. set up log server and send all logs to that server (CSC6)
-    c. set up backup and restore for mysql (CSC10)
-    c. set up backup and restore for wordpress (CSC10)
-    d. authorized software (CSC2)
-    e. secure config (CSC3) 
+1. consolidation/basic functionality
 
+    1. vagrant up workning with KVM and virtualbox - done
+    
+    2. write a basic README.md file with short description - done
+
+    3. restructure to follow ansible best practice dir structure
+
+    4. make script or describe how to perform integration tests
+
+    5. describe PR requirements in reade file
+
+    6. make vagrant up on windows work with ansible
+
+    7. make ansible install mysql
+
+    8. make ansible install wordpress
+
+4. Development
+
+    1. check_mk (not security for now)
+
+    2. set up log server and send all logs to that server (CSC6)
+
+    3. set up backup and restore for mysql (CSC10)
+
+    4. set up backup and restore for wordpress (CSC10)
+
+    5. authorized software (CSC2)
+
+    6. secure config (CSC3) 
 
 	
