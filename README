@@ -60,11 +60,12 @@ Go into the directory of the files, for example
 "cd /home/jesper/wordpress-ansible
 Edit the hosts file to either localhost or the ip address of the server,
 (can be the machine you are working on) with "nano hosts"
-Go to /etc/ansible and change the hostfile location in ansible.cfg to "/home/USER/wordpress-ansible",
-sawp user with your own user name.
-Generate public/private key pairs with "ssh-keygen". Press enter through all the steps.
+Go to /etc/ansible and change the hostfile location in ansible.cfg to,
+"/home/USER/wordpress-ansible".
+Swap user with your own user name.
+Generate public/private key pairs with "ssh-keygen".
+Press enter through all the steps.
 Copy the public key from the localhost with "ssh-copy-id localhost". 
-Replace IP-ADDRESS with your own ip.
 Run it with ansible using "ansible-playbook playbook.yml -i hosts -u USER -k"
 Replace USER with your own user name
 
