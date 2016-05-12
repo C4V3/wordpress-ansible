@@ -26,6 +26,11 @@ This system will have automated Backups, so a complete restoration is done from 
 6. get the virtual machines ip address - `vagrant ssh-config | grep HostName | cut -d ' ' -f4`
 6. To connect to Wordpress by pointing your browser to the ip addres/hostname
 
+### Testing the system:
+Follow the instruction in the link below.
+
+[Tests](Tests.md)
+
 ### Vagrantfile info:
     VM Box: debian/jessie64
     VM Provider: Virtualbox
@@ -43,7 +48,7 @@ This system will have automated Backups, so a complete restoration is done from 
 
 Before making a pull request follow the instructions in the link below.
 
-[AboutPullRequest](https://github.com/Nicl0996/wordpress-ansible/blob/master/AboutPullRequests.md)
+[AboutPullRequest](AboutPullRequests.md)
 
 ### Todo:
 1. consolidation/basic functionality
