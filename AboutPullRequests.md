@@ -1,4 +1,4 @@
-# Requirements for pull requests !
+# Requirements for pull requests
 
 ###
 ### Issue number:
