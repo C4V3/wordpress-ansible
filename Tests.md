@@ -3,14 +3,16 @@
 
 
 ### APACHE2: 
- 1. Open Webbrowser
- 2. type in 192.168.33.10/index.html
- 3. a page should show up with "It Works!"
+ 1. To get the IP for the server, vagrant ssh-config. look at hostname: there is an IP. 																	ex:(192.168.1.1)
+ 2. Open Webbrowser
+ 3. type in IP/index.html
+ 4. a page should show up with "It Works!"
 
 ### PHP: 
- 1. Open Webbrowser
- 2. type in 192.168.33.10/index.php
- 3. a page should show up with a php page with alot of infomation.
+ 1. To get the IP for the server, vagrant ssh-config. look at hostname: there is an IP. 																	ex:(192.168.1.1)
+ 2. Open Webbrowser
+ 3. type in IP/index.php
+ 4. a page should show up with a php page with alot of infomation.
 
 ### WORDPRESS: 
 Added when testet
