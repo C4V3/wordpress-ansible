@@ -1,5 +1,5 @@
 - hosts: all
-
+  sudo: yes
   roles: 
     - server
     - apache2
