@@ -43,7 +43,7 @@ This system will have automated Backups, so a complete restoration is done from 
 
 Before making a pull request follow the instructions in the link below.
 
-[AboutPullRequest](https://github.com/Nicl0996/wordpress-ansible/blob/master/README.md)
+[AboutPullRequest](https://github.com/Nicl0996/wordpress-ansible/blob/master/AboutPullRequests.md)
 
 ### Todo:
 1. consolidation/basic functionality
