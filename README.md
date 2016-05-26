@@ -1,4 +1,4 @@
-# Wordpress Ansible project for IT Security (2. semester)
+# Wordpress Ansible project for IT Security
 
 ###
 Vagrant versions tested
@@ -11,6 +11,14 @@ Ansible versions tested:
 Virtualization tested:
 * Virtualbox v5.0 
 * KVM 
+
+
+Getting Ansible latest Version:
+
+* sudo apt-get install software-properties-common
+* sudo apt-add-repository ppa:ansible/ansible
+* sudo apt-get update
+* sudo apt-get install ansible
 
 ####
 #### About: 
@@ -26,6 +34,11 @@ This system will have automated Backups, so a complete restoration is done from 
 6. get the virtual machines ip address - `vagrant ssh-config | grep HostName | cut -d ' ' -f4`
 6. To connect to Wordpress by pointing your browser to the ip addres/hostname
 
+### Testing the system:
+Follow the instruction in the link below.
+
+[Tests](Tests.md)
+
 ### Vagrantfile info:
     VM Box: debian/jessie64
     VM Provider: Virtualbox
@@ -38,6 +51,12 @@ This system will have automated Backups, so a complete restoration is done from 
     php
     mysql
     wordpress
+
+### Pull Requests:
+
+Before making a pull request follow the instructions in the link below.
+
+[AboutPullRequest](AboutPullRequests.md)
 
 ### Todo:
 1. consolidation/basic functionality

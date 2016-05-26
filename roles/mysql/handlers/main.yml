@@ -1,2 +1,10 @@
 ---
-# handlers file for mysql
+# file: mysql/handlers/main.yml
+
+- name: restart mysql
+  become: yes
+  become_method: sudo
+  service:
+    name: mysql
+    state: restarted
+    enabled: yes
