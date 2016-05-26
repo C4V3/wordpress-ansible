@@ -1,11 +1,10 @@
 - hosts: all
-
   roles: 
-    - server
-    - apache2
-    - php
+#    - server
+#    - apache2
+#    - php
     - mysql
-    - wordpress
+#    - wordpress
 
 
 

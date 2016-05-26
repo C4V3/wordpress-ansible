@@ -1,0 +1,13 @@
+# file: mysql/tasks/users.yml
+
+- name: MySQL | Make sure the MySQL users are present
+  become: yes
+  become_method: sudo
+  mysql_user:
+    name: "{{item.name}}"
+    password: "{{item.pass | default('pass')}}"
+    priv: "{{item.priv | default('*.*:ALL')}}"
+    state: present
+    host: "{{item.host | default('localhost')}}"
+  with_items: mysql_users
+  when: mysql_users|length > 0
