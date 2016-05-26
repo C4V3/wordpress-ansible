@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: webserver
 
   roles: 
     - server
@@ -7,5 +7,12 @@
     - mysql
     - wordpress
 
+- hosts: logserver
 
+  roles: 
+    - logserver
 
+- hosts: moniserv
+
+  roles: 
+    - moniserv
