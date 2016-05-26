@@ -1,4 +1,4 @@
-# Wordpress Ansible project for IT Security (2. semester)
+# Wordpress Ansible project for IT Security
 
 ###
 Vagrant versions tested
@@ -11,6 +11,14 @@ Ansible versions tested:
 Virtualization tested:
 * Virtualbox v5.0 
 * KVM 
+
+
+Getting Ansible latest Version:
+
+sudo apt-get install software-properties-common
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install ansible
 
 ####
 #### About: 
