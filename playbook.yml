@@ -12,3 +12,7 @@
   roles: 
     - logserver
 
+- hosts: moniserv
+
+  roles: 
+    - moniserv

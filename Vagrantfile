@@ -20,4 +20,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      ansible.playbook = "playbook.yml"
     end
   end
+
+  config.vm.define "moniserv" do |moniserv|
+    moniserv.vm.box = "debian/jessie64"
+    moniserv.vm.hostname = "moniserv"
+    moniserv.vm.provider "virtualbox"
+    moniserv.vm.provision :ansible do |ansible|
+     ansible.playbook = "playbook.yml"
+    end
+  end
+
 end  
