@@ -4,6 +4,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", inline: "echo Hello"
 
   config.vm.define "webserver" do |webserver|
+    webserver.vm.network "public_network",
+      use_dhcp_assigned_default_route: true
     webserver.vm.box = "debian/jessie64"
     webserver.vm.hostname = "webserver"
     webserver.vm.provider "virtualbox"
@@ -13,6 +15,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "logserver" do |logserver|
+    logserver.vm.network "public_network",
+      use_dhcp_assigned_default_route: true
     logserver.vm.box = "debian/jessie64"
     logserver.vm.hostname = "logserver"
     logserver.vm.provider "virtualbox"
@@ -22,6 +26,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "moniserv" do |moniserv|
+    moniserv.vm.network "public_network",
+      use_dhcp_assigned_default_route: true
     moniserv.vm.box = "debian/jessie64"
     moniserv.vm.hostname = "moniserv"
     moniserv.vm.provider "virtualbox"
