@@ -1,4 +1,5 @@
 - hosts: webserver
+  user: vagrant
 
   roles: 
     - server
@@ -8,11 +9,13 @@
     - wordpress
 
 - hosts: logserver
+  user: vagrant
 
   roles: 
     - logserver
 
 - hosts: moniserv
+  user: vagrant
 
   roles: 
     - moniserv
