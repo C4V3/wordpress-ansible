@@ -1,5 +1,16 @@
 # Wordpress Ansible project for IT Security
 
+### When cloning please use this command
+This command will update all submodules automatically.
+* `git clone --recursive URL`
+* For example: `git clone --recursive https://github.com/Nicl0996/wordpress-ansible.git`
+
+### If you didnt clone with --recursive, follow this:
+* git clone URL
+* cd /repository/
+* git submodule init
+* git submodule update
+
 ###
 Vagrant versions tested
 * Vagrant 1.8.1
