@@ -51,6 +51,11 @@ Follow the instruction in the link below.
     php
     mysql
     wordpress
+    generic-debian
+
+### Generic Debian role
+    This is a submodule containing an Ansible role that ensures all unattended updates are updated. 
+    To add a submodule to a repository: `git submodule add https://github.com/moozer/ansible-generic-debian.git generic-debian`
 
 ### Pull Requests:
 
