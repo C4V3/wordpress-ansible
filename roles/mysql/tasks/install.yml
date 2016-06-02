@@ -12,7 +12,7 @@
   apt:
     pkg: "{{item}}"
     update_cache: yes
-  with_items: mysql_packages
+  with_items: "{{mysql_packages}}"
 
 - name: MySQL | Ensure MySQL is running
   become: yes
