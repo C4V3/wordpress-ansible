@@ -9,8 +9,10 @@
     - wordpress
 
 - hosts: logserver
+  become: yes
 
   roles: 
+    - generic-debian
     - logserver
 
 - hosts: moniserv

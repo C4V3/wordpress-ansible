@@ -1,0 +1,3 @@
+[submodule "roles/generic-debian"]
+	path = roles/generic-debian
+	url = https://github.com/moozer/ansible-generic-debian.git
