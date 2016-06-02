@@ -1,5 +1,7 @@
 - hosts: webserver
   user: vagrant
+  become: yes
+  become_method: sudo
 
   roles: 
     - server
