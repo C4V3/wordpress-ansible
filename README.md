@@ -1,5 +1,16 @@
 # Wordpress Ansible project for IT Security
 
+### When cloning please use this command
+This command will update all submodules automatically.
+* `git clone --recursive URL`
+* For example: `git clone --recursive https://github.com/Nicl0996/wordpress-ansible.git`
+
+### If you didnt clone with --recursive, follow this:
+* git clone URL
+* cd /repository/
+* git submodule init
+* git submodule update
+
 ###
 Vagrant versions tested
 * Vagrant 1.8.1
@@ -51,6 +62,12 @@ Follow the instruction in the link below.
     php
     mysql
     wordpress
+    generic-debian
+
+### Generic Debian role
+    This is a submodule containing an Ansible role that ensures all unattended updates are updated. 
+    To add a submodule to a repository: 
+   `git submodule add https://github.com/moozer/ansible-generic-debian.git generic-debian`
 
 ### Pull Requests:
 
