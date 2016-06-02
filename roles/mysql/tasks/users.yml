@@ -1,8 +1,6 @@
 # file: mysql/tasks/users.yml
 
 - name: MySQL | Make sure the MySQL users are present
-  become: yes
-  become_method: sudo
   mysql_user:
     login_user: root
     login_password: "{{mysql_root_password}}"

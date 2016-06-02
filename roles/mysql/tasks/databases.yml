@@ -1,8 +1,6 @@
 # file: mysql/tasks/databases.yml
 
 - name: MySQL | Make sure the MySQL databases are present
-  become: yes
-  become_method: sudo
   mysql_db:
     login_user: root
     login_password: "{{mysql_root_password}}"
