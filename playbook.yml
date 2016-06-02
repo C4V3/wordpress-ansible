@@ -1,6 +1,8 @@
 - hosts: webserver
+  user: vagrant
   become: yes
   become_method: sudo
+
   roles: 
     - server
     - apache2
@@ -9,11 +11,13 @@
     - wordpress
 
 - hosts: logserver
+  user: vagrant
 
   roles: 
     - logserver
 
 - hosts: moniserv
+  user: vagrant
 
   roles: 
     - moniserv
