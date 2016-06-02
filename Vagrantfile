@@ -9,11 +9,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     libvirt.memory = 1024
   end
 
-  config.vm.provider :virtualbox do |virtualbox|
-    virtualbox.network "public_network",
-      use_dhcp_assigned_default_route: true
-  end
-
+# no virtualbox specific stuff
+#  config.vm.provider :virtualbox do |virtualbox|
+#  end
 
   # setup servers
   config.vm.box = "debian/jessie64"
@@ -24,6 +22,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   servers.each do |hostname|
     config.vm.define "#{hostname}" do |node|
       node.vm.hostname = "#{hostname}"
+      node.vm.network "public_network",
+        use_dhcp_assigned_default_route: true
     end
   end
 
