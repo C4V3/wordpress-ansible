@@ -12,7 +12,7 @@
    - ::1
    - localhost
   register: root_pw_already_set
-  ignore_errors: yes
+  failed_when: false
   when: ansible_hostname != 'localhost'
   tags:
     - change_root_password
@@ -30,7 +30,7 @@
    - 127.0.0.1
    - ::1
    - localhost
-  when: "root_pw_already_set|failed and ansible_hostname != 'localhost'"
+  when: "ansible_hostname != 'localhost'"
   tags:
     - change_root_password
 
