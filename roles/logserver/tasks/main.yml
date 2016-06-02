@@ -1,15 +1,16 @@
 
-# tasks file for server
+# tasks file for logserver
 ---
 - name: Update apt cache
   apt: update_cache=yes cache_valid_time=3600
   become: yes
-  become_method: sudo 
+  become_method: sudo
 
 - name: Install required software
   apt: name={{ item }} state=present
   become: yes
   become_method: sudo
+
   with_items:
     - mysql-server
     - php5-mysql

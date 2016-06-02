@@ -1,2 +1,7 @@
----
-# tasks file for php
+- name: Install php extensions
+  apt: name={{ item }} state=present
+  become: yes
+  become_method: sudo
+  with_items:
+    - php5-gd 
+    - libssh2-php
